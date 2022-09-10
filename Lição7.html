@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        function inicio() {
+            var escolha = parseInt(prompt('Digite 1-)Média 2-)Sair'));
+
+            if (escolha === 1) {
+                media();
+            } else if (escolha === 2) {
+                sair();
+            } else {
+                erro();
+            }
+        }
+
+        function media() {
+            var i = 0;
+            var acum = 0;
+
+        do {
+            var n1 = parseInt(prompt('Digite a primeira nota: '));
+            } while(n1  < 0 || n1 > 10);
+
+        do {
+            var n2 = parseInt(prompt('Digite a segunda nota: '));
+            } while (n2 < 0 || n2 > 10);
+        
+        do {
+            var n3 = parseInt(prompt('Digite a segunda nota: '));
+            } while (n3 < 0 || n3 > 10);
+
+        do {
+            var n4 = parseInt(prompt('Digite a segunda nota: '));
+            } while (n4 < 0 || n4 > 10);
+         
+        do {
+            var n5 = parseInt(prompt('Digite a segunda nota: '));
+            } while (n5 < 0 || n5 > 10);
+
+        do {
+            var n6 = parseInt(prompt('Digite a segunda nota: '));
+            } while (n6 < 0 || n6 > 10); 
+
+            media = (n1 + n2 + n3 + n4 + n5 + n6) / 6;
+
+        
+            if (media <= 8) {
+            alert('Reprovado. ' + media);
+            } else {
+            alert('Aprovado. ' + media);
+            acum++;
+            } 
+            
+        sair();        
+
+        } 
+
+        function sair() {
+            var confirma = confirm('Você deseja sair? ');
+
+            if (confirma) {
+                window.close();
+            } else {
+                inicio();
+            }
+
+            function erro() {
+                alert('Não viole safado(a). ');
+                inicio();
+            }
+        }
+        
+        
+        inicio();
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. 
+        Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. 
+        Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+    -->
+
+    <script>
+
+        function inicio() {
+            var escolha = parseInt(prompt('Digite 1-)Media 2-)Sair '));
+            //var violacao = alert('Não viole safado(a). ');
+
+            if (escolha === 1) {
+                media();
+            } else if (escolha === 2) {
+                sair();
+            } else {
+                erro();
+            }
+            
+        }
+        
+        function media() {
+
+        do {
+            var n1 = parseFloat(prompt('Digite a primeira nota: '));
+            var n2 = parseFloat(prompt('Digite a segunda nota: '));
+            var media = (n1 + n2) / 2;
+            var acum = 0;
+
+            if (media <= 8) {
+                alert('Reprovado. ' + media);
+            } else {
+                alert('Aprovado. ' + media);
+                document.write('Aprovado com: ' +media+ '</br>');
+                acum++;
+            } 
+            var resp = prompt('Calcular a média do outro aluno Sim/Não? ');
+            } while (resp == 'Sim' || resp == 'Sim' || resp ==  'S' || resp == 's');
+
+        }
+          
+
+        function sair() {
+            var confirma = confirm('Você deseja sair? ');
+
+            if (confirma) {
+                window.close();
+            } else {
+                inicio();
+            }
+        }
+
+        function erro() {
+            alert('Não viole safado(a). ');
+            inicio();
+        }
+
+        
+
+
+        inicio();
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
